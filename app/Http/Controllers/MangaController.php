@@ -23,4 +23,24 @@ class MangaController extends Controller
    {
     return $this->mangaInterface->fetchManga();
    }
+   public function fetchingByMangaId($id)
+   {
+    return $this->mangaInterface->fetchByMangaId($id);
+   }
+   public function updatingManga(Request $request,$id)
+   {
+    return $this->mangaInterface->updateManga($request,$id);
+   }
+   public function deletingManga($id,$image)
+   {
+    return $this->mangaInterface->deleteManga($image,$id);
+   }
+   public function fetchingMangaByGenreId($id)
+   {
+    return $this->mangaInterface->fetchMangaByGenreId($id);
+   }
+   public function fetchingLatestManga()
+   {
+    return $this->mangaInterface->fetchLatestManga();
+   }
 }
